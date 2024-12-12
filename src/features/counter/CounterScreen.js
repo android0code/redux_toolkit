@@ -1,13 +1,17 @@
-// write by "Amrik"
-import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {decrement, increment, incrementByAmount} from '../counter/counterSlice';
-import {View, Text, StyleSheet, Button} from 'react-native';
+// Written by Amrik
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "../counter/counterSlice";
+import { View, Text, StyleSheet, Button } from "react-native";
 
 export default function CounterScreen() {
-  const count = useSelector(state => state.counter.value);
+  const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
-  console.log('render counter screen...');
+  console.log("render counter screen...");
   return (
     <View style={styles.container}>
       <View style={styles.container}>
@@ -26,7 +30,7 @@ export default function CounterScreen() {
       </View>
 
       <View style={styles.container}>
-        <Text style={{fontSize: 20}}>Result : {count}</Text>
+        <Text style={{ fontSize: 20 }}>Result : {count}</Text>
       </View>
     </View>
   );
@@ -35,6 +39,6 @@ export default function CounterScreen() {
 const styles = StyleSheet.create({
   container: {
     margin: 10,
-    alignItems: 'center',
+    alignItems: "center",
   },
 });

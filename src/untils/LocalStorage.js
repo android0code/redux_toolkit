@@ -1,9 +1,9 @@
-// write by "Amrik"
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// Written by Amrik
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const PrefKeys = {
-  USER: 'user',
-  TOKEN: 'token',
+  USER: "user",
+  TOKEN: "token",
 };
 
 /**
@@ -25,7 +25,7 @@ export const saveToStorage = async (key, value) => {
  * @param {string} key - The key for the value to retrieve.
  * @returns {Promise<any>} - The parsed value from storage, or null if not found.
  */
-export const getFromStorage = async key => {
+export const getFromStorage = async (key) => {
   try {
     const value = await AsyncStorage.getItem(key);
     return value != null ? JSON.parse(value) : null;
@@ -39,7 +39,7 @@ export const getFromStorage = async key => {
  * Remove a value from AsyncStorage.
  * @param {string} key - The key for the value to remove.
  */
-export const removeFromStorage = async key => {
+export const removeFromStorage = async (key) => {
   try {
     await AsyncStorage.removeItem(key);
     console.log(`Removed ${key} successfully.`);

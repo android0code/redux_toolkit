@@ -1,4 +1,4 @@
-// write by "Amrik"
+// Written by Amrik
 import axios from 'axios';
 
 class ApiService {

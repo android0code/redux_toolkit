@@ -1,17 +1,17 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+// Written by Amrik
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Screens
-import Login from '..//features/auth/Login';
-// write by "Amrik"
-import {RouteConstants} from './RouteConstants';
+import Login from "..//features/auth/Login";
+import { RouteConstants } from "./RouteConstants";
 const AuthStack = createNativeStackNavigator();
 
-const AuthStackScreen = ({navigation, route}) => {
+const AuthStackScreen = ({ navigation, route }) => {
   return (
     <AuthStack.Navigator initialRouteName={RouteConstants.Login}>
       <AuthStack.Screen
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
         name={RouteConstants.Login}
         component={Login}
       />
